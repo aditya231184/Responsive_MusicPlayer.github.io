@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+
+</head>
+
+<body>
+    <div id="container">
+        <div id="text">Music Player</div>
+        <div id="audio-img">
+            <img class="cover">
+        </div>
+        <div id="audio-info">
+            <span class="artist"></span> - <span class="title"></span>
+        </div>
+        <ul id="playlist">
+            <li song="Jeff Buckley - Grace.mp3" cover="grace.jpg" artist="Jeff Buckley">Grace</li>
+            <li song="Airbag - Colours.mp3" cover="identity.jpg" artist="Airbag">Colours</li>
+            <li song="Tool - Schism.mp3" cover="lateralus.jpg" artist="Tool">Schism</li>
+            <li song="Jeff Buckley - Hallelujah.mp3" cover="grace.jpg" artist="Jeff Buckley">Hallelujah</li>
+            <li song="Airbag - How I Wanna Be.mp3" cover="identity.jpg" artist="Airbag">How I Wanna Be</li>
+            <li song="Hooverphonic - 2Wicky.mp3" cover="orchestra.jpg" artist="Hooverphonic">2Wicky</li>
+            <li song="Tool - The Pot.mp3" cover="10000-Days.jpg" artist="Tool">The Pot</li>
+            <li song="Airbag - All Rights Removed.mp3" cover="all rights removed.jpg" artist="Airbag">All Rights
+                Removed</li>
+            <li song="Hooverphonic -  Heartbroken.mp3" cover="orchestra.jpg" artist="Hooverphonic">Heartbroken</li>
+            <li song="Massive Attack - Teardrop.mp3" cover="mezanine.png" artist="Massive Attack">Teardrop</li>
+            <li song="Tool - Reflection.mp3" cover="lateralus.jpg" artist="Tool">Reflection</li>
+            <li song="Hooverphonic - Mad About You.mp3" cover="orchestra.jpg" artist="Hooverphonic">Mad About You</li>
+
+            <li song="Hooverphonic - One Two Three.mp3" cover="orchestra.jpg" artist="Hooverphonic">One Two Three</li>
+            <li song="Tool - Lost Keys.mp3" cover="10000-Days.jpg" artist="Tool">Lost Keys(Blame
+                Hofmann)</li>
+            <li song="Tool - Rosetta Stoned.mp3" cover="10000-Days.jpg" artist="Tool">Rosetta Stoned</li>
+        </ul>
+        <div id="tracker">
+            <div id="progressBar">
+                <span id="progress"></span>
+            </div>
+            <span id="duration"></span>
+        </div>
+        <div id="audio-player">
+            <span id="duration"></span>
+            <div id="audio-buttons">
+                <button id="prev"></button>
+                <button id="play"></button>
+                <button id="pause"></button>
+                <button id="stop"></button>
+                <button id="next"></button>
+                <input id="volume" type="range" min="0" max="10" volume="2">
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>

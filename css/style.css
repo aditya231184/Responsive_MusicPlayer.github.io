@@ -1,0 +1,397 @@
+/* For a mobile and tabloid screen */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 1.5em;
+  height: 100vh;
+  overflow: auto;
+  color: #fff;
+  background: url(../img/abstract_art.jpg);
+  background-size: cover;
+}
+
+#container {
+  width: 430px;
+  min-height: 400px;
+  background: #000;
+  overflow: hidden;
+  margin: 5px auto;
+  border: #666 solid 1px;
+  -moz-border-radius: 10px; /*equivalent to border-radius*/
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+#text {
+  font-family: "Tangerine", serif;
+  color: #fff;
+  font-weight: 200px;
+  font-size: 45px;
+  margin: 15px;
+  text-align: center;
+  text-shadow: 4px 4px 4px #aaa;
+}
+
+/* Album Image*/
+#audio-img {
+  position: static;
+  overflow: hidden;
+  width: 100%;
+  height: 300px;
+  margin-bottom: 15px;
+}
+
+.cover {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+#audio-info {
+  text-align: center;
+}
+
+#audio-info .artist {
+  font-weight: bold;
+}
+
+/* Volume Scale*/
+input#volume {
+  position: relative;
+  top: 35px;
+  right: 0px;
+  width: 15%;
+  -webkit-appearance: none !important;
+  margin-left: 2%;
+  background: #ccc;
+  height: 1px;
+  margin-bottom: 20px;
+  float: left;
+}
+
+/* For Volume knob*/
+input#volume::-webkit-slider-thumb {
+  cursor: pointer;
+  -webkit-appearance: none !important;
+  background: url(../img/knob.png) no-repeat;
+  height: 12px;
+  width: 12px;
+}
+
+/*Buttons*/
+#audio-buttons {
+  width: 100%;
+  display: block;
+  padding-top: 15px;
+  margin: 0px;
+  overflow: hidden;
+  background: #000;
+}
+
+button#play {
+  width: 70px;
+  height: 70px;
+  background: url(../img/play.png) no-repeat;
+  float: left;
+  border-radius: 100%;
+}
+
+button#pause {
+  width: 70px;
+  height: 70px;
+  background: url(../img/pause.png) no-repeat;
+  float: left;
+  border-radius: 100%;
+}
+
+button#stop {
+  width: 70px;
+  height: 70px;
+  background: url(../img/stop.png) no-repeat;
+  float: left;
+  border-radius: 100%;
+}
+
+button#prev {
+  width: 70px;
+  height: 70px;
+  background: url(../img/prev.png) no-repeat;
+  float: left;
+  margin-top: 15px;
+  margin-left: 30px;
+}
+
+button#next {
+  width: 70px;
+  height: 70px;
+  background: url(../img/next.png) no-repeat;
+  margin-top: 15px;
+  margin-left: 12px;
+  float: left;
+}
+
+/* Playlist*/
+#playlist {
+  list-style-type: none;
+  padding: 10px;
+  height: 120px;
+  clear: both;
+  overflow: auto;
+}
+
+#playlist li {
+  cursor: pointer;
+  margin: 5px;
+}
+
+#playlist li.active {
+  font-weight: bold;
+  padding: 3px;
+  background: #666;
+}
+
+/*Progressbar*/
+#progressBar {
+  width: 85%;
+  margin-left: 5px;
+  margin-bottom: 0px;
+  margin-top: 9px;
+  margin-right: 15%;
+  height: 10px;
+  background: url(../img/progress_bg.png) no-repeat;
+  float: left;
+}
+
+#progress {
+  background: url(../img/progress.png) no-repeat;
+  height: 10px;
+  display: inline-block;
+}
+
+/*Duration of song*/
+#duration {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  padding: 2px 6px;
+  background: #000;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#tracker {
+  position: relative;
+  width: 100%;
+}
+
+
+/* For a desktop screen */
+@media screen and (min-width: 1024px) {
+  body {
+    font-family: "Arial", sans-serif;
+    font-size: 13px;
+    line-height: 1.5em;
+    height: 100vh;
+    overflow: hidden;
+    color: #fff;
+    background: none;
+  }
+
+  #container {
+    width: 100%;
+    min-height: 100vh;
+    background: #000;
+    margin: 0px auto;
+    border: #666 solid 0px;
+    border-radius: 0px;
+  }
+
+  #text {
+    display: none;
+  }
+
+  /* Album Image*/
+  #audio-img {
+    position: static;
+    overflow: hidden;
+    width: 80%;
+    height: 80vh;
+    background: url(../img/bg12.jpg);
+    margin-bottom: none;
+  }
+
+  .cover {
+    width: 250px;
+    height: 200px;
+    margin-top: 130px;
+    margin-left: 40%;
+    z-index: 1;
+  }
+
+  #audio-info {
+    position: relative;
+    bottom: 50px;
+    left: 38%;
+    width: 80%;
+    height: 3vh;
+    text-align: left;
+  }
+
+  #audio-info .artist {
+    font-weight: bold;
+  }
+
+  /* Playlist*/
+  #playlist {
+    position: absolute;
+    width: 20%;
+    height: 80vh;
+    top: 0px;
+    right: 0px;
+    padding: 0px;
+    list-style-type: none;
+    background: #333;
+    overflow: auto;
+  }
+
+  #playlist li {
+    cursor: pointer;
+    margin: 15px;
+  }
+
+  #playlist li.active {
+    font-weight: bold;
+    padding: 3px;
+    background: #666;
+  }
+
+  /*Progressbar*/
+  #progressBar {
+    position: relative;
+    bottom: 40px;
+    width: 100%;
+    margin-top: 0px 0px 0px 0px;
+    height: 2vh;
+    background: url(../img/progress_bg.png) no-repeat;
+    float: left;
+  }
+
+  #progress {
+    background: url(../img/progress.png) no-repeat;
+    height: 10px;
+    display: inline-block;
+  }
+
+  /*Duration of song*/
+  #duration {
+    position: relative;
+    top: 10px;
+    left: 345px;
+    padding: 0px;
+    border-radius: none;
+    z-index: 1;
+  }
+
+  /*Audio-Player*/
+  #audio-player {
+    position: relative;
+    bottom: 50px;
+    width: 100%;
+    height: 15vh;
+    background: #000;
+  }
+
+  /*Buttons*/
+  #audio-buttons {
+    position: relative;
+    left: 30%;
+    top: 5px;
+    width: 40%;
+    height: 85px;
+    display: block;
+    margin-left: 30%;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 40px;
+    padding-top: 0px;
+    margin: 0px;
+    overflow: hidden;
+  }
+
+  button#play {
+    width: 70px;
+    height: 70px;
+    background: url(../img/play.png) no-repeat;
+    float: left;
+    border-radius: 100%;
+  }
+
+  button#pause {
+    width: 70px;
+    height: 70px;
+    background: url(../img/pause.png) no-repeat;
+    float: left;
+    border-radius: 100%;
+  }
+
+  button#stop {
+    width: 70px;
+    height: 70px;
+    background: url(../img/stop.png) no-repeat;
+    float: left;
+    border-radius: 100%;
+  }
+
+  button#prev {
+    width: 70px;
+    height: 70px;
+    background: url(../img/prev.png) no-repeat;
+    float: left;
+    margin-top: 15px;
+    margin-left: 30px;
+  }
+
+  button#next {
+    width: 70px;
+    height: 70px;
+    background: url(../img/next.png) no-repeat;
+    margin-top: 15px;
+    margin-left: 12px;
+    float: left;
+  }
+
+  /* Volume Scale*/
+  input#volume {
+    position: relative;
+    top: 35px;
+    right: 0px;
+    width: 15%;
+    -webkit-appearance: none !important;
+    margin-left: 2%;
+    background: #ccc;
+    height: 1px;
+    margin-bottom: 20px;
+    float: left;
+  }
+
+  /* For Volume knob*/
+  input#volume::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    background: url(../img/knob.png) no-repeat;
+    height: 12px;
+    width: 12px;
+  }
+
+  #tracker {
+    position: relative;
+    width: 100%;
+  }
+}
