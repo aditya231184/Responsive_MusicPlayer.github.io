@@ -9,7 +9,7 @@
 
 ## Deployment
 
-This website is hosted in github [Music Player](https://tetrachromat.github.io/Responsive_MusicPlayer.github.io/)
+This Music Player is hosted on github https://tetrachromat.github.io/Responsive_MusicPlayer.github.io/
 
 ## Built With
 
