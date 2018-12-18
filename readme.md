@@ -1,14 +1,15 @@
 # Responsive Music Player
 
  A fully functional responsive Music Player using the HTML5, CSS3 and JavaScript audio API. It allows you to create a playlist of songs and play, pause, stop, rewind and skip through tracks.
+
 |                           |                           |
 | -------------------------:|:------------------------- |
-|<img src="img/desktop.png" alt="Desktop_version" style="width:100%">|<img src="img/mobile.png" alt="mobile_version" style="width:100%">|
+| <img src="img/desktop.png" alt="Desktop_version" style="width:100%"> | <img src="img/mobile.png" alt="mobile_version" style="width:100%"> |
   
 
 ## Deployment
 
-This website is hosted in github [Music Player](https://tetrachromat.github.io/Responsive_Music_Player.github.io/)
+This Music Player is hosted on github https://tetrachromat.github.io/Responsive_MusicPlayer.github.io/
 
 ## Built With
 
