@@ -167,6 +167,7 @@ button#next {
   height: 10px;
   background: url(../img/progress_bg.png) no-repeat;
   float: left;
+  cursor: pointer;
 }
 
 #progress {
@@ -282,6 +283,7 @@ button#next {
     height: 2vh;
     background: url(../img/progress_bg.png) no-repeat;
     float: left;
+    cursor: pointer;
   }
 
   #progress {

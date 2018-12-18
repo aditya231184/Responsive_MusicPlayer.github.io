@@ -31,7 +31,7 @@ function initAudio(element) {
 }
 
 //Play Button
-$("#play").click(function() {
+$("#play").click(function () {
   audio.play();
   $("#play").hide();
   $("#pause").show();
@@ -40,14 +40,14 @@ $("#play").click(function() {
 });
 
 //Pause Button
-$("#pause").click(function() {
+$("#pause").click(function () {
   audio.pause();
   $("#pause").hide();
   $("#play").show();
 });
 
 //Stop Button
-$("#stop").click(function() {
+$("#stop").click(function () {
   audio.pause();
   audio.currentTime = 0;
   $("#pause").hide();
@@ -56,7 +56,7 @@ $("#stop").click(function() {
 });
 
 //Next Button
-$("#next").click(function() {
+$("#next").click(function () {
   audio.pause();
   var next = $("#playlist li.active").next();
   if (next.length == 0) {
@@ -68,7 +68,7 @@ $("#next").click(function() {
 });
 
 //Prev Button
-$("#prev").click(function() {
+$("#prev").click(function () {
   audio.pause();
   var prev = $("#playlist li.active").prev();
   if (prev.length == 0) {
@@ -80,7 +80,7 @@ $("#prev").click(function() {
 });
 
 //Playlist Song Click
-$("#playlist li").dblclick(function() {
+$("#playlist li").click(function () {
   audio.pause();
   initAudio($(this));
   $("#play").hide();
@@ -91,14 +91,14 @@ $("#playlist li").dblclick(function() {
 });
 
 //Volume Control
-$("#volume").change(function() {
+$("#volume").change(function () {
   audio.volume = parseFloat(this.value / 10);
 });
 
 //Time Duration
 function showDuration() {
   // bind() method attaches one or more event handlers for selected elements, and specifies a function to run when the event occurs.
-  $(audio).bind("timeupdate", function() {
+  $(audio).bind("timeupdate", function () {
     // Get hours and minutes
     // The parseInt() function parses a string and returns an integer. Only the first number in string is returned
     var s = parseInt(audio.currentTime % 60);
@@ -116,5 +116,12 @@ function showDuration() {
 
     //After song ends play next song
     if (audio.currentTime >= audio.duration) $("#next").trigger("click");
+  });
+
+  // Jump to the song point with Progress Bar
+  $("#progressBar").mouseup(function (e) {
+    var leftOffset = e.pageX - $(this).offset().left;
+    var songPercents = leftOffset / $('#progressBar').width();
+    audio.currentTime = songPercents * audio.duration;
   });
 }
